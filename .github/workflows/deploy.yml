@@ -1,8 +1,8 @@
 # When main branch is updated:
-# - Build
-# - Deploy the artifacts to Maven Central
-# - Update the dependency graph
-name: Maven Deploy
+# - Build site
+# - Deploy to GitHub Pages
+# - Update dependabot dependency graph
+name: Maven Site Deploy to GitHub Pages
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    uses: sentrysoftware/workflows/.github/workflows/maven-central-deploy.yml@main
+    uses: sentrysoftware/workflows/.github/workflows/maven-site-deploy.yml@main
     with:
       jdkVersion: "17"
     secrets: inherit
