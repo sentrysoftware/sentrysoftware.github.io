@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+keywords: license,apache,mit,bsd,agpl,gpl,lgpl
+description: Depending on the type and use of a Sentry Software open-source project, a different license will be used.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
   Open Sentry Web Site
   ჻჻჻჻჻჻
-  Copyright (C) 2023 - 2024 Sentry Software
+  Copyright 2023 - 2024 Sentry Software
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -11,8 +12,10 @@
   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
   copies of the Software, and to permit persons to whom the Software is
   furnished to do so, subject to the following conditions:
+
   The above copyright notice and this permission notice shall be included in
   all copies or substantial portions of the Software.
+
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -23,41 +26,15 @@
   ╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱
   -->
 
-<project name="Open Sentry">
+# Licenses
 
-	<skin>
-		<groupId>org.sentrysoftware.maven</groupId>
-		<artifactId>sentry-maven-skin</artifactId>
-		<version>6.2.00</version>
-	</skin>
+This page summarizes how Sentry Software open-source projects are licensed.
 
-	<bannerLeft>
-		<src>images/sentry-logo-114x40-white.png</src>
-		<href>https://sentrysoftware.org</href>
-	</bannerLeft>
+## Project types
 
-	<custom>
-		<keywords>open source,oss</keywords>
-		<bodyClass>open-sentry</bodyClass>
-	</custom>
-
-	<body>
-
-		<links>
-			<item name="Fork on GitHub" href="${project.scm.url}" />
-		</links>
-
-		<menu name="Topics">
-			<item name="Home" href="index.html" />
-			<item name="Sentry Repositories" href="repos.html" />
-			<item name="Forked Repositories" href="forks.html" />
-			<item name="Contributors" href="contributors.html" />
-			<item name="How to Contribute" href="contributing.html" />
-			<item name="Branching Model" href="branching.html" />
-			<item name="Licenses" href="licenses.html" />
-		</menu>
-
-		<menu ref="reports" />
-	</body>
-
-</project>
+| Project Type | Description | License | Examples |
+| --- | --- | --- | --- |
+| Java Library | A simple Java library that can be consumed by our other open-source projects, or even by external projects.<br/><br/>Artifacts are published on Maven Central. | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | <ul><li>Jawk</li><li>WinRM Java library</li><li>Maven plugins</li></ul> |
+| Non-Java Library | A non-Java project, with low licensing requirements | [MIT](https://opensource.org/license/mit/) | <ul><li>Reusable GitHub Actions</li></ul> |
+| Product | A usable product (Java or non-Java).<br/><br/>Installable packages are published as part of a GitHub Release. | [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html) | <ul><li>MetricsHub</li></ul> |
+| Web Site | Source to generate a public Web site | [MIT](https://opensource.org/license/mit/) | <ul><li>[sentrysoftware.org](http://sentrysoftware.org)</li></ul> |
