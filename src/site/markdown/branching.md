@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+keywords: gitflow, github, git
+description: Sentry Software uses a simplified branching model for its open-source projects.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
   Open Sentry Web Site
   ჻჻჻჻჻჻
-  Copyright (C) 2023 - 2024 Sentry Software
+  Copyright 2023 - 2024 Sentry Software
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -11,8 +12,10 @@
   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
   copies of the Software, and to permit persons to whom the Software is
   furnished to do so, subject to the following conditions:
+
   The above copyright notice and this permission notice shall be included in
   all copies or substantial portions of the Software.
+
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -23,41 +26,17 @@
   ╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱
   -->
 
-<project name="Open Sentry">
+## Branching Model
 
-	<skin>
-		<groupId>org.sentrysoftware.maven</groupId>
-		<artifactId>sentry-maven-skin</artifactId>
-		<version>6.2.00</version>
-	</skin>
+Branching model here is **simplified** and doesn't follow [*Gitflow*](https://nvie.com/posts/a-successful-git-branching-model/):
 
-	<bannerLeft>
-		<src>images/sentry-logo-114x40-white.png</src>
-		<href>https://sentrysoftware.org</href>
-	</bannerLeft>
-
-	<custom>
-		<keywords>open source,oss</keywords>
-		<bodyClass>open-sentry</bodyClass>
-	</custom>
-
-	<body>
-
-		<links>
-			<item name="Fork on GitHub" href="${project.scm.url}" />
-		</links>
-
-		<menu name="Topics">
-			<item name="Home" href="index.html" />
-			<item name="Sentry Repositories" href="repos.html" />
-			<item name="Forked Repositories" href="forks.html" />
-			<item name="Contributors" href="contributors.html" />
-			<item name="How to Contribute" href="contributing.html" />
-			<item name="Branching Model" href="branching.html" />
-			<item name="Licenses" href="licenses.html" />
-		</menu>
-
-		<menu ref="reports" />
-	</body>
-
-</project>
+* 1 `main` branch.
+* `feature/short-description` branches for new features and bug fixes, or `trivial/short-description` for trivial changes, like indentation, white spaces, etc.
+* `release/vX.Y.Z` branches for releases (this is done automatically by the [release workflow](https://github.com/sentrysoftware/workflows/tree/main?tab=readme-ov-file#maven-central-release)).
+* No `hotfix` or `bugfix` branches.
+* `vX.Y.Z` tags for each release (this is done automatically by the [release workflow](https://github.com/sentrysoftware/workflows/tree/main?tab=readme-ov-file#maven-central-release)).
+* Pull Requests (PR):
+  * The PR requests to merge your branch in your repository into the `main` branch of the `sentrysoftware` repository.
+  * 1 code review is required to merge the PR.
+  * PRs are "merged", **not** squashed, and **not** rebased.
+  * No sign-off is required (for now).

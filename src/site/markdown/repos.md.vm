@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+keywords: repo,github
+description: List of all GitHub public repositories of Sentry Software
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
   Open Sentry Web Site
@@ -23,41 +24,31 @@
   ╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱
   -->
 
-<project name="Open Sentry">
+Sentry Repositories
+===================
 
-	<skin>
-		<groupId>org.sentrysoftware.maven</groupId>
-		<artifactId>sentry-maven-skin</artifactId>
-		<version>6.2.00</version>
-	</skin>
+#* Fetch the GitHub API *#
+#set( $repoJson = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos") )
+#if( $repoJson && $repoJson.size() > 0 )
 
-	<bannerLeft>
-		<src>images/sentry-logo-114x40-white.png</src>
-		<href>https://sentrysoftware.org</href>
-	</bannerLeft>
+#* Transform the JSON object into a regular array *#
+#set ($repoList = [] )
+#foreach ($repo in $repoJson.iterator() )
+	#if(!$repo.fork && $repo.visibility == "public" && !$repo.archived && !$repo.disabled)
+		#set($_ = $repoList.add($repo) )
+	#end
+#end
 
-	<custom>
-		<keywords>open source,oss</keywords>
-		<bodyClass>open-sentry</bodyClass>
-	</custom>
+#* Sort this alphabetically *#
+#set( $sortedRepoList = $collection.sort($repoList, "name") )
+| Repository | Documentation | Description | License |
+|---|---|
+#foreach ($repo in $sortedRepoList )
+| [$repo.name]($repo.html_url) | #if($repo.homepage)\[[Home]($repo.homepage)\]#end | $!repo.description | #if($repo.license)[$repo.license.name]($repo.license.url)#end |
+#end
 
-	<body>
-
-		<links>
-			<item name="Fork on GitHub" href="${project.scm.url}" />
-		</links>
-
-		<menu name="Topics">
-			<item name="Home" href="index.html" />
-			<item name="Sentry Repositories" href="repos.html" />
-			<item name="Forked Repositories" href="forks.html" />
-			<item name="Contributors" href="contributors.html" />
-			<item name="How to Contribute" href="contributing.html" />
-			<item name="Branching Model" href="branching.html" />
-			<item name="Licenses" href="licenses.html" />
-		</menu>
-
-		<menu ref="reports" />
-	</body>
-
-</project>
+#* In case of an error, display a message *#
+#else
+$log.error("Could not fetch repositories")
+*No repositories.*
+#end

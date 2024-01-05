@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+keywords: contributor,github,top
+description: The list of contributors in Sentry Software open-source projects.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
   Open Sentry Web Site
@@ -23,41 +24,39 @@
   ╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱
   -->
 
-<project name="Open Sentry">
+Team Members & Contributors
+===========================
 
-	<skin>
-		<groupId>org.sentrysoftware.maven</groupId>
-		<artifactId>sentry-maven-skin</artifactId>
-		<version>6.2.00</version>
-	</skin>
+#* Fetch the GitHub API *#
+#set( $repoList = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos") )
+#if( $repoList && $repoList.size() > 0 )
 
-	<bannerLeft>
-		<src>images/sentry-logo-114x40-white.png</src>
-		<href>https://sentrysoftware.org</href>
-	</bannerLeft>
+#* Build a map with all contributors *#
+#set( $contribMap = {} )
+#foreach ($repo in $repoList.iterator() )
+	#if( !$repo.fork && $repo.visibility == "public" && !$repo.archived && !$repo.disabled)
+		#* For each repo, fetch the list of contributors *#
+		#set( $contributors = $json.fetch($repo.contributors_url) )
+		#if ($contributors && $contributors.size() > 0)
+			#foreach ($contributor in $contributors.iterator() )
+				#set( $_ = $contribMap.put($contributor.login, $contributor) )
+			#end
+		#end
+	#end
+#end
 
-	<custom>
-		<keywords>open source,oss</keywords>
-		<bodyClass>open-sentry</bodyClass>
-	</custom>
+#* Sort the map *#
+#set( $sortedContribMap = $collection.sort($contribMap, "contributions:desc") )
 
-	<body>
+#* Output the Markdown table *#
+| Name | Contributions |
+|---|---|
+#foreach ($contributor in $sortedContribMap)
+| [$contributor.login]($contributor.html_url) | $contributor.contributions |
+#end
 
-		<links>
-			<item name="Fork on GitHub" href="${project.scm.url}" />
-		</links>
-
-		<menu name="Topics">
-			<item name="Home" href="index.html" />
-			<item name="Sentry Repositories" href="repos.html" />
-			<item name="Forked Repositories" href="forks.html" />
-			<item name="Contributors" href="contributors.html" />
-			<item name="How to Contribute" href="contributing.html" />
-			<item name="Branching Model" href="branching.html" />
-			<item name="Licenses" href="licenses.html" />
-		</menu>
-
-		<menu ref="reports" />
-	</body>
-
-</project>
+#* If no result, display a message *#
+#else
+$log.error("Could not fetch repositories")
+*No repositories.*
+#end
