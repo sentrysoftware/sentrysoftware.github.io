@@ -53,6 +53,7 @@
 			<item name="Forked Repositories" href="forks.html" />
 			<item name="Contributors" href="contributors.html" />
 			<item name="How to Contribute" href="contributing.html" />
+			<item name="Code of Conduct" href="code-of-conduct.html" />
 			<item name="Branching Model" href="branching.html" />
 			<item name="Licenses" href="licenses.html" />
 		</menu>

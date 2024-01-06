@@ -89,7 +89,7 @@ The benefits of open-source software are multiple for end-users as well, as it g
 
 ## Contributing to Sentry Repositories
 
-Please carefully follow some [basic rules we've established](contributing.html) to ensure you don't waste your time while trying to help!
+Please carefully follow some [basic rules we've established](code-of-conduct.html) to ensure a healthy collaboration between different people, and refer to the [contributor's guide](contributing.html) to ensure you don't waste your time while trying to help!
 
 ## Licenses
 
