@@ -8,14 +8,14 @@
 	<name>Open Sentry Web Site</name>
 	<version>IN-PROGRESS</version>
 	<description>This project contains the source for sentrysoftware.org Web site.</description>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<organization>
 		<name>Sentry Software</name>
 		<url>https://sentrysoftware.com</url>
 	</organization>
 
-	<url>https://github.com/sentrysoftware/sentrysoftware.github.io</url>
+	<url>https://sentrysoftware.github.io</url>
 	<inceptionYear>2023</inceptionYear>
 
 	<licenses>
@@ -134,7 +134,6 @@
 						<reports>
 							<report>ci-management</report>
 							<report>issue-management</report>
-							<report>licenses</report>
 							<report>plugins</report>
 							<report>scm</report>
 							<report>summary</report>
