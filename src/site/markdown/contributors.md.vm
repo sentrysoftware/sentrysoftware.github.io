@@ -24,8 +24,8 @@ description: The list of contributors in Sentry Software open-source projects.
   ╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱
   -->
 
-Team Members & Contributors
-===========================
+Contributors
+============
 
 #* Fetch the GitHub API *#
 #set( $repoList = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos") )
@@ -33,16 +33,30 @@ Team Members & Contributors
 
 #* Build a map with all contributors *#
 #set( $contribMap = {} )
-#foreach ($repo in $repoList.iterator() )
-	#if( !$repo.fork && $repo.visibility == "public" && !$repo.archived && !$repo.disabled)
-		#* For each repo, fetch the list of contributors *#
-		#set( $contributors = $json.fetch($repo.contributors_url) )
-		#if ($contributors && $contributors.size() > 0)
-			#foreach ($contributor in $contributors.iterator() )
-				#set( $_ = $contribMap.put($contributor.login, $contributor) )
-			#end
-		#end
-	#end
+#foreach ($repo in $repoList.iterator())
+  #if (!$repo.fork && $repo.visibility == "public" && !$repo.archived && !$repo.disabled)
+    $log.debug("Now fetching " + $repo.name + " repository")
+    #* For each repo, fetch the list of contributors *#
+    #set( $contributors = $json.fetch($repo.contributors_url) )
+    #if ($contributors && $contributors.size() > 0)
+      #* For each contributor in the repo *#
+      #foreach ($contributor in $contributors.iterator())
+        #* Skip bots *#
+        #if ($contributor.login != "actions-user" && $contributor.login != "dependabot[bot]")
+          $log.debug($contributor.login + " contributed " + $contributor.contributions + " to " + $repo.name)
+          #if ($contribMap.containsKey($contributor.login))
+            #* Add contributions count to the existing entry *#
+            #set( $contribMap[$contributor.login].contributions = $contribMap[$contributor.login].contributions + $contributor.contributions )
+          #else
+            #* Add a new entry to the map *#
+            #set( $_ = $contribMap.put($contributor.login, $contributor) )
+          #end
+        #end
+      #end
+    #end
+  #else
+    $log.debug("Skipping " + $repo.name + " repository")
+  #end
 #end
 
 #* Sort the map *#
