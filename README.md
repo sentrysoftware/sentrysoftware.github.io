@@ -3,7 +3,7 @@
 ![Build](https://img.shields.io/github/actions/workflow/status/sentrysoftware/sentrysoftware.github.io/deploy.yml)
 ![GitHub top language](https://img.shields.io/badge/language-Markdown-blue)
 ![License](https://img.shields.io/github/license/sentrysoftware/sentrysoftware.github.io)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://sentrysoftware.github.io/code-of-conduct.html)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://sentrysoftware.org/code-of-conduct.html)
 
 Source repository for the Web site hosted at [sentrysoftware.org](https://sentrysoftware.org).
 

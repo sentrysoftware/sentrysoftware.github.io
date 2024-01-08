@@ -49,7 +49,7 @@ The MetricsHub project consists of three main repositories:
 
 ### Sentry Maven Skin
 
-The [Sentry Maven Skin](https://sentrysoftware.github.io/sentry-maven-skin) is a skin used when building a [documentation site with Maven](https://maven.apache.org/plugins/maven-site-plugin/examples/creating-content.html). This skin provides a stylish design, an excellent Lighthouse score, and features not available in other Maven skins. This site is, in fact, built with Maven and the Sentry Maven Skin!
+The [Sentry Maven Skin](https://sentrysoftware.org/sentry-maven-skin) is a skin used when building a [documentation site with Maven](https://maven.apache.org/plugins/maven-site-plugin/examples/creating-content.html). This skin provides a stylish design, an excellent Lighthouse score, and features not available in other Maven skins. This site is, in fact, built with Maven and the Sentry Maven Skin!
 
 ![Screenshot of an example Maven project using the Sentry Maven Skin to build its site.](images/sentry-maven-skin.png)
 
@@ -72,7 +72,7 @@ Before open-sourcing our own products, we contributed to third-party open-source
 * [OpenTelemetry Collector Contrib](https://github.com/open-telemetry/opentelemetry-collector-contrib), where we added proper Otel-to-Prometheus conversion for metrics and attributes. Our code even ended up in [Prometheus](https://github.com/prometheus/prometheus) itself!
 * [Apache Maven Doxia](https://github.com/sentrysoftware/maven-doxia) and [Apache Maven Site Plugin](https://github.com/apache/maven-site-plugin), where we improved the rendering of Markdown documents.
 
-A special project we've contributed to is [Jawk](https://sentrysoftware.github.io/Jawk/), a Java implementation of the famous [AWK](https://en.wikipedia.org/wiki/AWK) parsing utility. We've forked the original project, and we now maintain our own version, much lighter and faster. We will try to be as compatible as possible with [GNU AWK (gawk)](https://www.gnu.org/software/gawk/).
+A special project we've contributed to is [Jawk](https://sentrysoftware.org/Jawk/), a Java implementation of the famous [AWK](https://en.wikipedia.org/wiki/AWK) parsing utility. We've forked the original project, and we now maintain our own version, much lighter and faster. We will try to be as compatible as possible with [GNU AWK (gawk)](https://www.gnu.org/software/gawk/).
 
 ## Why Open Source
 
