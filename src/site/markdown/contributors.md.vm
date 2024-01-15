@@ -28,13 +28,13 @@ Contributors
 ============
 
 #* Fetch the GitHub API *#
-#set( $repoList = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos") )
+#set( $repoList = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos?type=public&sort=full_name&per_page=100") )
 #if( $repoList && $repoList.size() > 0 )
 
 #* Build a map with all contributors *#
 #set( $contribMap = {} )
 #foreach ($repo in $repoList.iterator())
-  #if (!$repo.fork && $repo.visibility == "public" && !$repo.archived && !$repo.disabled)
+  #if (!$repo.fork && !$repo.archived && !$repo.disabled)
     $log.debug("Now fetching " + $repo.name + " repository")
     #* For each repo, fetch the list of contributors *#
     #set( $contributors = $json.fetch($repo.contributors_url) )
