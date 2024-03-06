@@ -48,23 +48,55 @@
 	</developers>
 
 	<properties>
-		<!-- Java 11 -->
-		<maven.compiler.release>11</maven.compiler.release>
+		<!-- Running on CI? -->
+		<runsOnCi>${env.CI}</runsOnCi>
 
 		<!-- UTF-8 -->
 		<project.build.encoding>UTF-8</project.build.encoding>
 		<project.build.sourceEncoding>${project.build.encoding}</project.build.sourceEncoding>
 		<project.build.resourceEncoding>${project.build.encoding}</project.build.resourceEncoding>
 
-		<!-- Reproducible Build -->
-		<!-- See https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
-		<project.build.outputTimestamp>2023-10-25T22:28:48Z</project.build.outputTimestamp>
 	</properties>
 
 	<build>
 
 		<!-- Actual build plugins -->
 		<plugins>
+
+			<!-- build-helper -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.5.0</version>
+				<executions>
+					<execution>
+						<id>timestamp</id>
+						<goals>
+							<goal>timestamp-property</goal>
+						</goals>
+						<phase>pre-site</phase>
+						<configuration>
+							<name>timestamp</name>
+							<pattern>YYYY-MM-dd'T'HH:mm:ss'Z'</pattern>
+							<timeSource>build</timeSource>
+							<timezone>GMT</timezone>
+						</configuration>
+					</execution>
+					<execution>
+						<id>today</id>
+						<goals>
+							<goal>timestamp-property</goal>
+						</goals>
+						<phase>pre-site</phase>
+						<configuration>
+							<name>today</name>
+							<pattern>YYYY-MM-dd</pattern>
+							<timeSource>build</timeSource>
+							<timezone>GMT</timezone>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
 			<!-- license -->
 			<plugin>

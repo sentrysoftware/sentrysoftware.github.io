@@ -35,9 +35,9 @@ This is the home for [Sentry Software](https://sentrysoftware.com)'s open-source
 
 ### MetricsHub
 
-The most significant open-source project that Sentry Software is working on is [MetricsHub](https://metricshub.com). MetricsHub is a universal metrics collection agent for OpenTelemetry. This solution is designed to be extensible, and we hope to build a community around it so that all users can benefit from the extensions made by others.
+![inline](images/metricshub-logo-only.png)
 
-![Diagram showing MetricsHub, a universal metrics collection agent for OpenTelemetry — our first open-source project.](images/metricshub-diagram.png)
+The most significant open-source project that Sentry Software is working on is [MetricsHub](https://metricshub.com). MetricsHub is a universal metrics collection agent for OpenTelemetry. This solution is designed to be extensible, and we hope to build a community around it so that all users can benefit from the extensions made by others.
 
 This is the first time we are publishing an entire software solution in open source. The main challenge has been to migrate a significant part of internal libraries from closed source to open source: [various protocol clients](#java-libraries), Maven [plugins](#sentry-maven-skin), etc. Ensuring that the entire project can build on GitHub or anyone's system took us a considerable amount of time, but we're proud of the result!
 

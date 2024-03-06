@@ -23,23 +23,16 @@
  * THE SOFTWARE.
  * ╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱
  */
-body.open-sentry .site-banner {
-	background-color: #266fd0;
+
+body.open-sentry {
+	--banner-bgcolor: #266fd0;
+	--link-color: #d50c37;
+}
+body.open-sentry.dark {
+	--link-color: #ff6989;
 }
 
 body.open-sentry nav.left-menu ul>li.active>a,
 body.open-sentry nav.left-menu ul>li.active>a:hover {
 	background-color: #449b4d;
-}
-
-body.open-sentry .main-content a {
-	color: #d50c37;
-}
-
-body.open-sentry .search-results-content .progressbar .bar {
-	background-color: #d50c37;
-}
-
-body.open-sentry .badge {
-	background-color: #266fd0
 }
