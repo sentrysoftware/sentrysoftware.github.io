@@ -27,6 +27,9 @@ description: The list of contributors in Sentry Software open-source projects.
 Contributors
 ============
 
+#if($runsOnCi != "true")#*
+*#*List produced when running on GitHub Actions only, when `CI=true`*.#*
+*##else
 #* Fetch the GitHub API *#
 #set( $repoList = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos?type=public&sort=full_name&per_page=100") )
 #if( $repoList && $repoList.size() > 0 )
@@ -73,4 +76,6 @@ Contributors
 #else
 $log.error("Could not fetch repositories")
 *No repositories.*
+#end
+
 #end

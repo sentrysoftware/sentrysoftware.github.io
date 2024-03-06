@@ -27,6 +27,9 @@ description: Sentry Software contributes to other open-source projects. It's the
 Forked Repositories
 =====================
 
+#if($runsOnCi != "true")#*
+  *#*List produced when running on GitHub Actions only, when `CI=true`*.#*
+*##else
 #* Fetch the GitHub API *#
 #set( $repoJson = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos?type=public&sort=full_name&per_page=100") )
 #if( $repoJson && $repoJson.size() > 0 )
@@ -49,4 +52,6 @@ Forked Repositories
 #else
 $log.error("Could not fetch repositories")
 *No repositories.*
+#end
+
 #end
