@@ -28,7 +28,7 @@
 	<skin>
 		<groupId>org.sentrysoftware.maven</groupId>
 		<artifactId>sentry-maven-skin</artifactId>
-		<version>6.3.03</version>
+		<version>6.4.00</version>
 	</skin>
 
 	<bannerLeft>
@@ -46,7 +46,6 @@
 		<projectVersion>${today}</projectVersion>
 		<publishDate>${timestamp}</publishDate>
 		<keywords>open source,oss</keywords>
-		<bodyClass>open-sentry</bodyClass>
 		<social>
 			<twitter>sentrysoftware</twitter>
 			<linkedin>sentry-software</linkedin>

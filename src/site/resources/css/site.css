@@ -24,15 +24,48 @@
  * ╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱
  */
 
-body.open-sentry {
-	--banner-bgcolor: #266fd0;
-	--link-color: #d50c37;
-}
-body.open-sentry.dark {
-	--link-color: #ff6989;
+/* Poppins font */
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-ExtraBold.woff2') format('woff2'),
+		url('../fonts/Poppins-ExtraBold.woff') format('woff'),
+		url('../fonts/Poppins-ExtraBold.ttf') format('truetype'),
+		local('Helvetica');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
 }
 
-body.open-sentry nav.left-menu ul>li.active>a,
-body.open-sentry nav.left-menu ul>li.active>a:hover {
-	background-color: #449b4d;
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+		url('../fonts/Poppins-Bold.woff') format('woff'),
+		url('../fonts/Poppins-Bold.ttf') format('truetype'),
+		local('Helvetica');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+		url('../fonts/Poppins-Regular.woff') format('woff'),
+		url('../fonts/Poppins-Regular.ttf') format('truetype'),
+		local('Helvetica');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* MetricsHub fonts */
+:root {
+	--title-font: "Poppins", sans-serif;
+	--heading-font: "Poppins", sans-serif;
+	--content-font: "Poppins", sans-serif;
+
+	--content-font-size: medium;
+	--banner-font-size: 40px;
+	--banner-font-weight: 800;
+
 }
