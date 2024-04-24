@@ -42,6 +42,8 @@
 		<name><![CDATA[<i class="fa-brands fa-github"></i> Edit on GitHub]]></name>
 	</bannerRight>
 
+	<googleAnalyticsAccountId>GTM-MDV2QM2P</googleAnalyticsAccountId>
+
 	<custom>
 		<projectVersion>${today}</projectVersion>
 		<publishDate>${timestamp}</publishDate>
