@@ -79,6 +79,8 @@ In this case, the _topic branch_ should be named `trivial/short-description`.
 * When implementing additional changes after reviewers suggestions, simply commit and push such changes. **Never squash or rebase commits that you have already pushed!**
 * Once your PR is merged (if approved), [sync your forked repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork), pull these changes to your locally cloned repository and delete your branch.
 
+**By submitting a PR to one of Sentry Software's repositories, you accept the terms of the [Sentry Software Contributor License Agreement (CLA)](cla.md).**
+
 ## Builds
 
 To facilitate external contributions, automatic builds don't happen on Sentry Software's internal Jenkins server, but directly in GitHub with [GitHub Actions](https://docs.github.com/en/actions/quickstart).

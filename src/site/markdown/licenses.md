@@ -1,4 +1,4 @@
-keywords: license,apache,mit,bsd,agpl,gpl,lgpl
+keywords: license,apache,mit,bsd,agpl,gpl,lgpl,cla,contributor
 description: Depending on the type and use of a Sentry Software open-source project, a different license will be used.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
@@ -38,3 +38,7 @@ This page summarizes how Sentry Software open-source projects are licensed.
 | Non-Java Library | A non-Java project, with low licensing requirements | [MIT](https://opensource.org/license/mit/) | <ul><li>Reusable GitHub Actions</li></ul> |
 | Product | A usable product (Java or non-Java).<br/><br/>Installable packages are published as part of a GitHub Release. | [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html) | <ul><li>MetricsHub</li></ul> |
 | Web Site | Source to generate a public Web site | [MIT](https://opensource.org/license/mit/) | <ul><li>[sentrysoftware.org](http://sentrysoftware.org)</li></ul> |
+
+## Contributor License Agreement
+
+Some open-source projects at Sentry Software are used in commercial products. For example, the MetricsHub Agent (and its engine) is used in MetricsHub Enterprise. To allow Sentry Software to use open-source code in its commercial offering, all contributors are required to accept a specific [Contributor License Agreement](cla.md).
