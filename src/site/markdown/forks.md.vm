@@ -1,10 +1,10 @@
 keywords: fork,github
-description: Sentry Software contributes to other open-source projects. It's the philosophy of open-source software!
+description: MetricsHub contributes to other open-source projects. It's the philosophy of open-source software!
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
-  Open Sentry Web Site
+  Open MetricsHub Web Site
   ჻჻჻჻჻჻
-  Copyright (C) 2023 - 2024 Sentry Software
+  Copyright (C) 2025 MetricsHub
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@ Forked Repositories
   *#*List produced when running on GitHub Actions only, when `CI=true`*.#*
 *##else
 #* Fetch the GitHub API *#
-#set( $repoJson = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos?type=public&sort=full_name&per_page=100") )
+#set( $repoJson = $json.fetch("https://api.github.com/orgs/metricshub/repos?type=public&sort=full_name&per_page=100") )
 #if( $repoJson && $repoJson.size() > 0 )
 
 #* Transform the JSON object into a regular array *#

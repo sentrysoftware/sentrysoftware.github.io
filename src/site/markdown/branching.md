@@ -1,10 +1,10 @@
 keywords: gitflow, github, git
-description: Sentry Software uses a simplified branching model for its open-source projects.
+description: MetricsHub uses a simplified branching model for its open-source projects.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
-  Open Sentry Web Site
+  Open MetricsHub Web Site
   ჻჻჻჻჻჻
-  Copyright 2023 - 2024 Sentry Software
+  Copyright 2025 MetricsHub
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -36,7 +36,7 @@ Branching model here is **simplified** and doesn't follow [*Gitflow*](https://nv
 * No `hotfix` or `bugfix` branches.
 * `vX.Y.Z` tags for each release (this is done automatically by the [release workflow](https://github.com/sentrysoftware/workflows/tree/main?tab=readme-ov-file#maven-central-release)).
 * Pull Requests (PR):
-  * The PR requests to merge your branch in your repository into the `main` branch of the `sentrysoftware` repository.
+  * The PR requests to merge your branch in your repository into the `main` branch of the `metricshub.github.io` repository.
   * 1 code review is required to merge the PR.
   * PRs are "merged", **not** squashed, and **not** rebased.
   * No sign-off is required (for now).

@@ -1,10 +1,10 @@
 keywords: metricshub,maven,gsf,asf,lf,cncf
-description: Home for open-source projects from Sentry Software, including MetricsHub.
+description: Home for open-source projects from MetricsHub, including MetricsHub.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
-  Open Sentry Web Site
+  Open MetricsHub Web Site
   ჻჻჻჻჻჻
-  Copyright 2023 - 2024 Sentry Software
+  Copyright 2025 MetricsHub
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ description: Home for open-source projects from Sentry Software, including Metri
   -->
 # Open Source Home
 
-This is the home for [Sentry Software](https://sentrysoftware.com)'s open-source projects, all hosted [on GitHub](https://github.com/sentrysoftware): the directory of [repositories](repos.html), [how to contribute](contributing.html), etc.
+This is the home for [MetricsHub](https://metricshub.com)'s open-source projects, all hosted [on GitHub](https://github.com/metricshub): the directory of [repositories](repos.html), [how to contribute](contributing.html), etc.
 
 <!-- MACRO{toc|fromDepth=1|toDepth=2|id=toc} -->
 
@@ -37,23 +37,15 @@ This is the home for [Sentry Software](https://sentrysoftware.com)'s open-source
 
 ![inline](images/metricshub-logo-only.png)
 
-The most significant open-source project that Sentry Software is working on is [MetricsHub](https://metricshub.com). MetricsHub is a universal metrics collection agent for OpenTelemetry. This solution is designed to be extensible, and we hope to build a community around it so that all users can benefit from the extensions made by others.
+The most significant open-source project that [MetricsHub](https://metricshub.com) is working on is a universal metrics collection agent for OpenTelemetry. This solution is designed to be extensible, and we hope to build a community around it so that all users can benefit from the extensions made by others.
 
 This is the first time we are publishing an entire software solution in open source. The main challenge has been to migrate a significant part of internal libraries from closed source to open source: [various protocol clients](#java-libraries), Maven [plugins](#sentry-maven-skin), etc. Ensuring that the entire project can build on GitHub or anyone's system took us a considerable amount of time, but we're proud of the result!
 
 The MetricsHub project consists of three main repositories:
 
-* [MetricsHub Community Connectors](https://github.com/sentrysoftware/metricshub-community-connectors), where anyone can easily contribute with new connectors to collect metrics from anywhere!
-* [MetricsHub](https://github.com/sentrysoftware/metricshub), the main OpenTelemetry collection agent.
-* [MetricsHub Connector Maven Plugin](https://github.com/sentrysoftware/metricshub-connector-maven-plugin), the Maven plugin to build the documentation for the Community Connectors project.
-
-### Sentry Maven Skin
-
-The [Sentry Maven Skin](https://sentrysoftware.org/sentry-maven-skin) is a skin used when building a [documentation site with Maven](https://maven.apache.org/plugins/maven-site-plugin/examples/creating-content.html). This skin provides a stylish design, an excellent Lighthouse score, and features not available in other Maven skins. This site is, in fact, built with Maven and the Sentry Maven Skin!
-
-![Screenshot of an example Maven project using the Sentry Maven Skin to build its site.](images/sentry-maven-skin.png)
-
-The initial internal versions of this skin did not fulfill all the requirements of standard Maven skins (like customizing the logo, links, etc.). Open-sourcing this project forced us to comply with all requirements so that anyone could use this (very nice) skin to build the site of their Maven project.
+* [MetricsHub Community Connectors](https://github.com/metricshub/metricshub-community-connectors), where anyone can easily contribute with new connectors to collect metrics from anywhere!
+* [MetricsHub](https://github.com/metricshub/metricshub), the main OpenTelemetry collection agent.
+* [MetricsHub Connector Maven Plugin](https://github.com/metricshub/metricshub-connector-maven-plugin), the Maven plugin to build the documentation for the Community Connectors project.
 
 ### Java Libraries
 
@@ -63,16 +55,6 @@ While working on open-sourcing [MetricsHub](https://metricshub.com), we first ha
 * [winrm](https://github.com/sentrysoftware/winrm), a Java library to execute commands or WMI queries on a remote Windows system through WinRM.
 * [wbem](https://github.com/sentrysoftware/wbem), a Java library to perform WBEM operations.
 * [wmi](https://github.com/sentrysoftware/wmi), a Java library to execute commands or WMI queries on a remote Windows system, through WMI (on Windows only).
-
-## Sentry Contributions to Other Projects
-
-Before open-sourcing our own products, we contributed to third-party open-source projects that we were relying on (and we keep contributing!):
-
-* [OpenTelemetry Semantic Conventions](https://github.com/open-telemetry/semantic-conventions), where we defined semantic conventions for hardware metrics ([see documentation](https://opentelemetry.io/docs/specs/semconv/system/hardware-metrics/)).
-* [OpenTelemetry Collector Contrib](https://github.com/open-telemetry/opentelemetry-collector-contrib), where we added proper Otel-to-Prometheus conversion for metrics and attributes. Our code even ended up in [Prometheus](https://github.com/prometheus/prometheus) itself!
-* [Apache Maven Doxia](https://github.com/sentrysoftware/maven-doxia) and [Apache Maven Site Plugin](https://github.com/apache/maven-site-plugin), where we improved the rendering of Markdown documents.
-
-A special project we've contributed to is [Jawk](https://sentrysoftware.org/Jawk/), a Java implementation of the famous [AWK](https://en.wikipedia.org/wiki/AWK) parsing utility. We've forked the original project, and we now maintain our own version, much lighter and faster. We will try to be as compatible as possible with [GNU AWK (gawk)](https://www.gnu.org/software/gawk/).
 
 ## Why Open Source
 
@@ -87,7 +69,7 @@ And then we realized that if we wanted to fully collaborate with important open-
 
 The benefits of open-source software are multiple for end-users as well, as it guarantees our customers that our software products remain open, secure, and will even last long after us!
 
-## Contributing to Sentry Repositories
+## Contributing to MetricsHub Repositories
 
 Please carefully follow some [basic rules we've established](code-of-conduct.html) to ensure a healthy collaboration between different people, and refer to the [contributor's guide](contributing.html) to ensure you don't waste your time while trying to help!
 

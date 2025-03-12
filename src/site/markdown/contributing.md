@@ -1,10 +1,10 @@
 keywords: contributor
-description: Sentry Software established some rules to make sure your contributions are valued properly.
+description: MetricsHub established some rules to make sure your contributions are valued properly.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
-  Open Sentry Web Site
+  Open MetricsHub Web Site
   ჻჻჻჻჻჻
-  Copyright 2023 - 2024 Sentry Software
+  Copyright 2025 MetricsHub
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -72,24 +72,24 @@ In this case, the _topic branch_ should be named `trivial/short-description`.
 ## Submitting changes
 
 * Push your changes to a topic branch in your fork of the repository.
-* Submit a _Pull Request_ (PR) to the corresponding repository in the `sentrysoftware` organization.
+* Submit a _Pull Request_ (PR) to the corresponding repository in the `metricshub` organization.
   * Verify _Files Changed_ shows only your intended changes and does not include additional files or changes like white spaces, etc.
   * Make sure all automatic checks are successful.
   * Verify comments produced automatically by code quality automatic checks.
 * When implementing additional changes after reviewers suggestions, simply commit and push such changes. **Never squash or rebase commits that you have already pushed!**
 * Once your PR is merged (if approved), [sync your forked repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork), pull these changes to your locally cloned repository and delete your branch.
 
-**By submitting a PR to one of Sentry Software's repositories, you accept the terms of the [Sentry Software Contributor License Agreement (CLA)](cla.md).**
+**By submitting a PR to one of MetricsHub's repositories, you accept the terms of the [MetricsHub Contributor License Agreement (CLA)](cla.md).**
 
 ## Builds
 
-To facilitate external contributions, automatic builds don't happen on Sentry Software's internal Jenkins server, but directly in GitHub with [GitHub Actions](https://docs.github.com/en/actions/quickstart).
+To facilitate external contributions, automatic builds don't happen on MetricsHub's internal Jenkins server, but directly in GitHub with [GitHub Actions](https://docs.github.com/en/actions/quickstart).
 
-Whenever possible, Sentry Software open-source projects must use shared workflows from the [sentrysoftware/workflows](https://github.com/sentrysoftware/workflows) repository to build, deploy artifacts, and release new versions.
+Whenever possible, MetricsHub open-source projects must use shared workflows from the [sentrysoftware/workflows](https://github.com/sentrysoftware/workflows) repository to build, deploy artifacts, and release new versions.
 
 ## Java libraries
 
-Sentry Software's open-source Java library projects are published on Maven Central. We will enforce several requirements to ensure the quality of our libraries:
+MetricsHub's open-source Java library projects are published on Maven Central. We will enforce several requirements to ensure the quality of our libraries:
 
 * The project must publish its _Maven Site_ (`mvn site`) with full reports as GitHub Pages:
   * [Checkstyle](https://checkstyle.org/)
@@ -98,7 +98,7 @@ Sentry Software's open-source Java library projects are published on Maven Centr
   * [SpotBugs](https://spotbugs.github.io/)
   * Unit tests
   * Javadoc
-* Maven's artifact _groupId_ must be `org.sentrysoftware.*`
+* Maven's artifact _groupId_ must be `org.metricshub`
 * License must be [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) and all source files must include a header with the Apache-2.0 notice. We use `mvn license:update-file-header` to update the source file headers.
 * Publish the Javadoc and Source artifacts along with the main artifact
 

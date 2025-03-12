@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
-  Open Sentry Web Site
+  Open MetricsHub Web Site
   ჻჻჻჻჻჻
-  Copyright (C) 2023 - 2024 Sentry Software
+  Copyright (C) 2025 MetricsHub
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
   ╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱
   -->
 
-<project name="Open Sentry">
+<project name="Open MetricsHub">
 
 	<skin>
 		<groupId>org.sentrysoftware.maven</groupId>
@@ -32,9 +32,9 @@
 	</skin>
 
 	<bannerLeft>
-		<src>images/sentry-logo-114x40-white.png</src>
-		<href>https://sentrysoftware.org</href>
-		<alt>Open Sentry Home</alt>
+		<src>images/metricshub-logo-only.png</src>
+		<href>https://metricshub.org</href>
+		<alt>Open MetricsHub Home</alt>
 	</bannerLeft>
 
 	<bannerRight>
@@ -50,7 +50,7 @@
 		<keywords>open source,oss</keywords>
 		<social>
 			<twitter>sentrysoftware</twitter>
-			<linkedin>sentry-software</linkedin>
+			<linkedin>metricshub</linkedin>
 			<custom>
 				<title>Learn about our solutions on YouTube</title>
 				<href>https://www.youtube.com/SentrySoftware</href>
@@ -58,7 +58,7 @@
 			</custom>
 			<custom>
 				<title>Join us on Slack!</title>
-				<href>https://sentrysoftware.com/about/join-slack-community.html</href>
+				<href>https://metricshub.slack.com</href>
 				<icon>fa-brands fa-slack</icon>
 			</custom>
 		</social>
@@ -66,27 +66,27 @@
 		<additionalLinks>
 			<link>
 				<name>Terms of Service</name>
-				<href>https://sentrysoftware.com/legal/general.html</href>
+				<href>https://metricshub.com/legal/general.html</href>
 			</link>
 			<link>
 				<name>Privacy Policy</name>
-				<href>https://sentrysoftware.com/legal/privacy.html</href>
+				<href>https://metricshub.com/legal/privacy.html</href>
 			</link>
 			<link>
 				<name>Cookie Policy</name>
-				<href>https://sentrysoftware.com/legal/cookies.html</href>
+				<href>https://metricshub.com/legal/cookies.html</href>
 			</link>
 			<link>
 				<name>Disclaimer</name>
-				<href>https://sentrysoftware.com/legal/disclaimer.html</href>
+				<href>https://metricshub.com/legal/disclaimer.html</href>
 			</link>
 			<link>
 				<name>Trademarks</name>
-				<href>https://sentrysoftware.com/legal/trademarks.html</href>
+				<href>https://metricshub.com/legal/trademarks.html</href>
 			</link>
 			<link>
 				<name>Code of Ethics</name>
-				<href>https://sentrysoftware.com/legal/ethics.html</href>
+				<href>https://metricshub.com/legal/ethics.html</href>
 			</link>
 		</additionalLinks>
 	</custom>
@@ -94,13 +94,13 @@
 	<body>
 
 		<links>
-			<item name="&lt;i class='fa-brands fa-github'>&lt;/i> GitHub" href="https://github.com/sentrysoftware" />
+			<item name="&lt;i class='fa-brands fa-github'>&lt;/i> GitHub" href="https://github.com/metricshub" />
 			<item name="MetricsHub&reg;" href="https://metricshub.com" />
 		</links>
 
 		<menu name="Topics">
 			<item name="Home" href="index.html" />
-			<item name="Sentry Repositories" href="repos.html" />
+			<item name="MetricsHub Repositories" href="repos.html" />
 			<item name="Forked Repositories" href="forks.html" />
 			<item name="Contributors" href="contributors.html" />
 			<item name="How to Contribute" href="contributing.html" />

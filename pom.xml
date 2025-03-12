@@ -3,20 +3,20 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.sentrysoftware</groupId>
+	<groupId>org.metricshub</groupId>
 	<artifactId>site</artifactId>
-	<name>Open Sentry Web Site</name>
+	<name>Open MetricsHub Web Site</name>
 	<version>IN-PROGRESS</version>
-	<description>This project contains the source for sentrysoftware.org Web site.</description>
+	<description>This project contains the source for metricshub.org Web site.</description>
 	<packaging>pom</packaging>
 
 	<organization>
-		<name>Sentry Software</name>
-		<url>https://sentrysoftware.com</url>
+		<name>MetricsHub</name>
+		<url>https://metricshub.com</url>
 	</organization>
 
-	<url>https://sentrysoftware.org</url>
-	<inceptionYear>2023</inceptionYear>
+	<url>https://metricshub.org</url>
+	<inceptionYear>2025</inceptionYear>
 
 	<licenses>
 		<license>
@@ -28,12 +28,12 @@
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/sentrysoftware/sentrysoftware.github.io/issues/</url>
+		<url>https://github.com/MetricsHub/metricshub.github.io/issues/</url>
 	</issueManagement>
 
 	<scm>
-		<connection>scm:git:https://github.com/sentrysoftware/sentrysoftware.github.io.git</connection>
-		<url>https://github.com/sentrysoftware/sentrysoftware.github.io</url>
+		<connection>scm:git:https://github.com/MetricsHub/metricshub.github.io.git</connection>
+		<url>https://github.com/MetricsHub/metricshub.github.io</url>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -105,7 +105,7 @@
 				<version>2.5.0</version>
 				<configuration>
 					<licenseName>mit</licenseName>
-					<copyrightOwners>Sentry Software</copyrightOwners>
+					<copyrightOwners>MetricsHub</copyrightOwners>
 					<copyrightStringFormat>Copyright %1$s %2$s</copyrightStringFormat>
 					<extraExtensions>
 						<md>xml</md>

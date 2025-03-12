@@ -1,10 +1,10 @@
 keywords: contributor,github,top
-description: The list of contributors in Sentry Software open-source projects.
+description: The list of contributors in MetricsHub open-source projects.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
-  Open Sentry Web Site
+  Open MetricsHub Web Site
   ჻჻჻჻჻჻
-  Copyright (C) 2023 - 2024 Sentry Software
+  Copyright (C) 2025 MetricsHub
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@ Contributors
 *#*List produced when running on GitHub Actions only, when `CI=true`*.#*
 *##else
 #* Fetch the GitHub API *#
-#set( $repoList = $json.fetch("https://api.github.com/orgs/sentrysoftware/repos?type=public&sort=full_name&per_page=100") )
+#set( $repoList = $json.fetch("https://api.github.com/orgs/metricshub/repos?type=public&sort=full_name&per_page=100") )
 #if( $repoList && $repoList.size() > 0 )
 
 #* Build a map with all contributors *#

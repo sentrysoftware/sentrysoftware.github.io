@@ -1,10 +1,10 @@
 keywords: license,apache,mit,bsd,agpl,gpl,lgpl,cla,contributor
-description: Depending on the type and use of a Sentry Software open-source project, a different license will be used.
+description: Depending on the type and use of a MetricsHub open-source project, a different license will be used.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
-  Open Sentry Web Site
+  Open MetricsHub Web Site
   ჻჻჻჻჻჻
-  Copyright 2023 - 2024 Sentry Software
+  Copyright 2025 MetricsHub
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@ description: Depending on the type and use of a Sentry Software open-source proj
 
 # Licenses
 
-This page summarizes how Sentry Software open-source projects are licensed.
+This page summarizes how MetricsHub open-source projects are licensed.
 
 ## Project types
 
@@ -37,8 +37,8 @@ This page summarizes how Sentry Software open-source projects are licensed.
 | Java Library | A simple Java library that can be consumed by our other open-source projects, or even by external projects.<br/><br/>Artifacts are published on Maven Central. | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | <ul><li>Jawk</li><li>WinRM Java library</li><li>Maven plugins</li></ul> |
 | Non-Java Library | A non-Java project, with low licensing requirements | [MIT](https://opensource.org/license/mit/) | <ul><li>Reusable GitHub Actions</li></ul> |
 | Product | A usable product (Java or non-Java).<br/><br/>Installable packages are published as part of a GitHub Release. | [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html) | <ul><li>MetricsHub</li></ul> |
-| Web Site | Source to generate a public Web site | [MIT](https://opensource.org/license/mit/) | <ul><li>[sentrysoftware.org](http://sentrysoftware.org)</li></ul> |
+| Web Site | Source to generate a public Web site | [MIT](https://opensource.org/license/mit/) | <ul><li>[metricshub.org](http://metricshub.org)</li></ul> |
 
 ## Contributor License Agreement
 
-Some open-source projects at Sentry Software are used in commercial products. For example, the MetricsHub Agent (and its engine) is used in MetricsHub Enterprise. To allow Sentry Software to use open-source code in its commercial offering, all contributors are required to accept a specific [Contributor License Agreement](cla.md).
+Some open-source projects at MetricsHub are used in commercial products. For example, the MetricsHub Agent (and its engine) is used in MetricsHub Enterprise. To allow MetricsHub to use open-source code in its commercial offering, all contributors are required to accept a specific [Contributor License Agreement](cla.md).

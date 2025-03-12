@@ -1,11 +1,11 @@
 
 keywords: conduct, ethics, contributor, code, covenant
-description: Sentry Software pledges to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+description: MetricsHub pledges to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
 <!--
   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲
-  Open Sentry Web Site
+  Open MetricsHub Web Site
   ჻჻჻჻჻჻
-  Copyright 2023 - 2024 Sentry Software
+  Copyright 2025 MetricsHub
   ჻჻჻჻჻჻
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -88,7 +88,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-[legal@sentrysoftware.com](mailto:legal@sentrysoftware.com).
+[legal@metricshub.com](mailto:legal@metricshub.com).
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
